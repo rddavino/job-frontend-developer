@@ -12,10 +12,7 @@
                 v-bind:key="categoria">
                 {{ categoria }}
             </a>
-
         </nav>
-
-
     </header>
 </template>
 

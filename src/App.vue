@@ -1,17 +1,17 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   <CabecalhoPagina />
+  <RodapePagina />
 </template>
 
 <script>
 import CabecalhoPagina from './components/compartilhados/CabecalhoPagina.vue';
-// import HelloWorld from './components/HelloWorld.vue'
+import RodapePagina from './components/compartilhados/RodapePagina.vue';
 
 export default {
   name: 'App',
   components: {
-    CabecalhoPagina
+    CabecalhoPagina,
+    RodapePagina
   }
 }
 </script>
