@@ -18,6 +18,7 @@
 
 <script>
 import BarraPesquisa from "./BarraPesquisa.vue";
+import ServicoProduto from "../../services/ServicoProduto"
 
 export default {
     name: 'CabecalhoPagina',
@@ -28,12 +29,13 @@ export default {
 
     data() {
         return {
-            listaCategorias: ["eletronics", "jewlery", "men's clothing", "women's clothing"]
+            servicoProduto: new ServicoProduto,
+            listaCategorias: []
         }
     },
 
-    methods: {
-
+    async mounted() {
+        this.listaCategorias = await this.servicoProduto.buscarCategorias();
     }
 }
 </script>
