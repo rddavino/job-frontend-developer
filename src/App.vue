@@ -1,20 +1,15 @@
 <template>
-  <CabecalhoPagina />
-  <VitrinePagina :tituloPagina=tituloPagina />
-  <RodapePagina />
+  <PaginaInicial />
 </template>
 
 <script>
-import CabecalhoPagina from './components/compartilhados/CabecalhoPagina.vue';
-import RodapePagina from './components/compartilhados/RodapePagina.vue';
-import VitrinePagina from './components/compartilhados/VitrinePagina.vue';
+import PaginaInicial from '././components/paginas/PaginaInicial.vue'
+
 
 export default {
   name: 'App',
   components: {
-    CabecalhoPagina,
-    RodapePagina,
-    VitrinePagina
+    PaginaInicial
   },
 
   data() {

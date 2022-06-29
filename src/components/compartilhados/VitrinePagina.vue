@@ -39,7 +39,8 @@ export default {
     name: 'VitrinePagina',
 
     props: {
-        tituloPagina: String
+        tituloPagina: String,
+        categoria: String
     },
 
     data() {
@@ -50,7 +51,12 @@ export default {
     },
 
     async mounted() {
-        this.listaProdutos = await this.servicoProduto.buscarProdutos();
+        if (!this.categoria) {
+            this.listaProdutos = await this.servicoProduto.buscarProdutos();
+        } else {
+            this.listaProdutos = await this.servicoProduto.buscarProdutosPorCategoria(this.categoria);
+        }
+
     }
 
 
@@ -96,6 +102,11 @@ export default {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 2px 6px 8px $cor-sombra-projetada;
+            }
 
             :last-child {
                 margin-right: 0px;
