@@ -1,10 +1,10 @@
 <template>
-    <div class="rodape">
+    <footer class="rodape">
         <div class="rodape_conteudo">
             <img class="rodape_conteudo_logo" src="../../assets/logo.9cec7572.png" alt="logo Yampi">
 
-            <div class="rodape_conteudo_linksInstitucional">
-                <p class="conteudo_linksInstitucional_titulo">Institucional</p>
+            <section div class="rodape_conteudo_linksInstitucional">
+                <h1 class="conteudo_linksInstitucional_titulo">Institucional</h1>
                 <ul class="conteudo_linksInstitucional_item">
                     <li><a href="#">Quem somos</a></li>
                     <li><a href="#">Política de privacidade</a></li>
@@ -12,18 +12,18 @@
                     <li><a href="#">Política de troca e devolução</a></li>
                     <li><a href="#">Nossas lojas</a></li>
                 </ul>
-            </div>
+            </section>
 
-            <div class="rodape_conteudo_linksAjuda">
-                <p class="conteudo_linksAjuda_titulo">Ajuda</p>
+            <section class="rodape_conteudo_linksAjuda">
+                <h1 class="conteudo_linksAjuda_titulo">Ajuda</h1>
                 <ul class="conteudo_linksAjuda_item">
                     <li><a href="#">Fale conosco</a></li>
                     <li><a href="#">Perguntas frequentes</a></li>
                 </ul>
-            </div>
+            </section>
 
         </div>
-    </div>
+    </footer>
 </template>
 
 <script>
@@ -36,7 +36,6 @@ export default {
 @import '../../estilos/variaveis.scss';
 
 .rodape {
-    width: 100%;
     height: auto;
     background-color: $cor-background-caixa;
     display: flex;
@@ -65,8 +64,11 @@ export default {
             align-items: flex-start;
             justify-content: center;
 
-            p {
-                margin: 4px 0px;
+            .conteudo_linksAjuda_titulo,
+            .conteudo_linksInstitucional_titulo {
+                margin: 0px;
+                font-size: 16px;
+                color: $cor-texto;
             }
 
             .conteudo_linksInstitucional_item,

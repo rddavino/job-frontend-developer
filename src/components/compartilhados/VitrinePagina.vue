@@ -21,14 +21,11 @@
                     </p>
                 </div>
 
-
-
             </div>
 
         </div>
 
     </section>
-
 
 </template>
 
@@ -56,9 +53,7 @@ export default {
         } else {
             this.listaProdutos = await this.servicoProduto.buscarProdutosPorCategoria(this.categoria);
         }
-
     }
-
 
 }
 
@@ -142,7 +137,6 @@ export default {
                     max-width: 228px;
                 }
             }
-
         }
     }
 }
