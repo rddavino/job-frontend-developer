@@ -1,15 +1,18 @@
 <template>
-  <PaginaInicial />
+  <!-- <PaginaInicial /> -->
+  <PaginaProduto />
 </template>
 
 <script>
-import PaginaInicial from '././components/paginas/PaginaInicial.vue'
+// import PaginaInicial from '././components/paginas/PaginaInicial.vue'
+import PaginaProduto from '././components/paginas/PaginaProduto.vue'
 
 
 export default {
   name: 'App',
   components: {
-    PaginaInicial
+    // PaginaInicial
+    PaginaProduto
   },
 
   data() {
