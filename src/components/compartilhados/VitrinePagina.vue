@@ -8,22 +8,24 @@
 
         <div class="vitrine_produtos">
             <div class="vitrine_produtos_card" v-for="produto in listaProdutos" v-bind:key="produto">
-                <div class="produtos_card_imagem">
-                    <img :src="produto.image" :alt="produto.description">
+                <div @click="redirecionarParaProduto(produto.id)">
+
+                    <div class="produtos_card_imagem">
+                        <img :src="produto.image" :alt="produto.description">
+                    </div>
+
+                    <div class="produtos_card_detalhes">
+                        <p class="card_detalhes_nomeProduto">
+                            {{ produto.title }}
+                        </p>
+
+                        <p class="card_detalhes_precoProduto">
+                            R$ {{ produto.price }}
+                        </p>
+                    </div>
+
                 </div>
-
-                <div class="produtos_card_detalhes">
-                    <p class="card_detalhes_nomeProduto">
-                        {{ produto.title }}
-                    </p>
-
-                    <p class="card_detalhes_precoProduto">
-                        R$ {{ produto.price }}
-                    </p>
-                </div>
-
             </div>
-
         </div>
 
     </section>
@@ -32,19 +34,21 @@
 
 <script>
 import ServicoProduto from "../../services/ServicoProduto"
+import router from "../../router/router"
 
 export default {
     name: 'VitrinePagina',
 
     props: {
         tituloPagina: String,
-        categoria: String
+        categoria: String,
     },
 
     data() {
         return {
             servicoProduto: new ServicoProduto,
-            listaProdutos: []
+            listaProdutos: [],
+            
         }
     },
 
@@ -53,6 +57,12 @@ export default {
             this.listaProdutos = await this.servicoProduto.buscarProdutos();
         } else {
             this.listaProdutos = await this.servicoProduto.buscarProdutosPorCategoria(this.categoria);
+        }
+    },
+
+    methods: {
+        redirecionarParaProduto(idProduto) {
+            router.push({ path: `/produto/${idProduto}`});
         }
     }
 }
