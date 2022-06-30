@@ -8,7 +8,7 @@
 
         <div class="vitrine_produtos">
             <div class="vitrine_produtos_card" v-for="produto in listaProdutos" v-bind:key="produto">
-                <div @click="redirecionarParaProduto(produto.id)">
+                <div>
 
                     <div class="produtos_card_imagem">
                         <img :src="produto.image" :alt="produto.description">
@@ -34,7 +34,6 @@
 
 <script>
 import ServicoProduto from "../../services/ServicoProduto"
-import router from "../../router/router"
 
 export default {
     name: 'VitrinePagina',
@@ -60,11 +59,7 @@ export default {
         }
     },
 
-    methods: {
-        redirecionarParaProduto(idProduto) {
-            router.push({ path: `/produto/${idProduto}`});
-        }
-    }
+ 
 }
 
 </script>
