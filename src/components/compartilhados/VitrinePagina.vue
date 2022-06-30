@@ -5,6 +5,7 @@
             <h1 class="vitrine_cabecalho_titulo">{{ tituloPagina }}</h1>
         </div>
 
+
         <div class="vitrine_produtos">
             <div class="vitrine_produtos_card" v-for="produto in listaProdutos" v-bind:key="produto">
                 <div class="produtos_card_imagem">
@@ -54,7 +55,6 @@ export default {
             this.listaProdutos = await this.servicoProduto.buscarProdutosPorCategoria(this.categoria);
         }
     }
-
 }
 
 </script>
@@ -67,8 +67,14 @@ export default {
     width: 67%;
     margin: 48px auto;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     .vitrine_cabecalho {
 
+        width: 100%;
         border-bottom: 4px solid $cor-borda-caixa;
         margin-bottom: 16px;
 
@@ -82,21 +88,22 @@ export default {
 
     .vitrine_produtos {
 
+        width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
         flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
 
         .vitrine_produtos_card {
-            height: 300px;
-            width: 20%;
-            padding: 20px;
+            height: 280px;
+            min-width: 20%;
+            max-width: 20%;
+            padding: 24px;
             border-radius: 16px;
-            margin: 5px;
+            margin-bottom: 16px;
             display: flex;
+            justify-content: space-between;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
 
             &:hover {
                 cursor: pointer;
@@ -119,23 +126,66 @@ export default {
 
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-end;
+                justify-content: center;
+                align-items: center;
 
                 .card_detalhes_nomeProduto {
-
-                    margin: 0;
+                    margin-bottom: 12px;
                     font-size: 13px;
+                    height: 16px;
                     text-align: center;
-                    max-width: 228px;
-                    overflow-y: hidden;
+                    overflow-y: hidden !important;
                 }
 
                 .card_detalhes_precoProduto {
                     margin: 0;
                     font-size: 20px;
-                    text-align: center;
                     max-width: 228px;
+                    text-align: center;
+                    color: $cor-texto-destaque;
+                    font-weight: bold;
                 }
+            }
+        }
+
+
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        .vitrine_produtos {
+
+            justify-content: space-between;
+
+            .vitrine_produtos_card {
+
+                min-width: 40%;
+                max-width: 40%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 728px) {
+
+        .vitrine_produtos {
+
+            .vitrine_produtos_card {
+
+                min-width: 35%;
+                max-width: 35%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 555px) {
+
+        .vitrine_produtos {
+            justify-content: center;
+
+            .vitrine_produtos_card {
+
+                min-width: 100%;
+                max-width: 100%;
             }
         }
     }
