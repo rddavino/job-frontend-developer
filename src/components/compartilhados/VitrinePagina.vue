@@ -107,7 +107,7 @@ export default {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
 
         .vitrine_produtos_card {
