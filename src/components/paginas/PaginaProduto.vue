@@ -24,7 +24,7 @@
                     <div class="infos_quantidadeValor_preco">
                         R$ {{ this.produto.price }}
                     </div>
-                    <button class="infos_quantidadeValor_botao">
+                    <button class="infos_quantidadeValor_botao" @click="redirecionarParaCarrinho()">
                         <span class="quantidadeValor_botao_label">
                             Comprar
                         </span>
@@ -69,6 +69,11 @@ export default {
         this.produto = await this.servicoProduto.buscarProdutoPorId(this.idProduto);
         this.categoria = this.produto.category;
         console.log("categoria:", this.categoria)
+    }, 
+    methods: {
+         redirecionarParaCarrinho() {
+            this.$router.push(`/pagina-em-construcao`);
+        }
     }
 
 }
@@ -161,6 +166,7 @@ export default {
                     border-radius: 8px;
                     border: none;
                     padding: 12px 16px;
+                    cursor: pointer;
 
                     .quantidadeValor_botao_label {
                         color: $cor-texto-botao-principal;
