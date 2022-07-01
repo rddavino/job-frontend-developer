@@ -8,7 +8,11 @@
                 @click="redirecionarParaPaginaInicial()"                
             >
             <BarraPesquisa />
-            <button class="cabecalho_pesquisaECarrinho_botaoCarrinho">
+            <button 
+                class="cabecalho_pesquisaECarrinho_botaoCarrinho"
+                @click="redirecionarParaCarrinho()"
+
+            >
                 <font-awesome-icon class="pesquisaECarrinho_botaoCarrinho_icone" icon="fa-solid fa-cart-shopping" />
             </button>
         </div>
@@ -55,7 +59,10 @@ export default {
 
         redirecionarParaPaginaInicial() {
             this.$router.push(`/`);
+        },
 
+         redirecionarParaCarrinho() {
+            this.$router.push(`/pagina-em-construcao`);
         }
     }
 }
@@ -89,6 +96,7 @@ export default {
             border: none;
             border-radius: 12px;
             box-shadow: 2px 6px 8px $cor-sombra-projetada;
+            cursor: pointer;
 
             .pesquisaECarrinho_botaoCarrinho_icone {
                 font-size: 24px;

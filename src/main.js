@@ -5,6 +5,7 @@ import App from './App.vue'
 import PaginaInicial from '../src/components/paginas/PaginaInicial.vue'
 import PaginaProduto from '../src/components/paginas/PaginaProduto.vue'
 import PaginaCategoria from '../src/components/paginas/PaginaCategoria.vue'
+import PaginaEmConstrucao from '../src/components/paginas/PaginaEmConstrucao.vue'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -23,6 +24,7 @@ const routes = [
     { path: '/', component: PaginaInicial },
     { path: '/produto/:id', component: PaginaProduto },
     { path: '/category/:id', component: PaginaCategoria },
+    { path: '/pagina-em-construcao', component: PaginaEmConstrucao },
   ]
  
   const router = createRouter({
