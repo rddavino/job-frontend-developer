@@ -51,7 +51,6 @@ export default {
     },
 
     async mounted() {
-        // console.log("aqio:")
 
         if (!this.categoria) {
             console.log("não tem categoria: ", this.categoria)

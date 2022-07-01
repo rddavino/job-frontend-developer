@@ -18,9 +18,9 @@
                 </div>
 
                 <div class="detalhes_infos_quantidadeValor">
-                    <div class="infos_quantidadeValor_contador">
+                    <!-- <div class="infos_quantidadeValor_contador">
                         contador
-                    </div>
+                    </div> -->
                     <div class="infos_quantidadeValor_preco">
                         R$ {{ this.produto.price }}
                     </div>
@@ -142,9 +142,9 @@ export default {
                 border-radius: 20px;
                 background-color: $cor-background-caixa;
 
-                .infos_quantidadeValor_contador {
-                    text-align: right;
-                }
+                // .infos_quantidadeValor_contador {
+                //     text-align: right;
+                // }
 
                 .infos_quantidadeValor_preco {
                     text-align: right;
