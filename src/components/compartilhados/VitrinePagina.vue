@@ -90,8 +90,8 @@ export default {
         margin-bottom: 16px;
 
         .vitrine_cabecalho_titulo {
-            font-size: $texto-titulo;
-            color: $cor-texto;
+            font-size: $texto-grande;
+            color: $cor-texto-titulo;
             text-transform: uppercase;
             text-align: center;
         }

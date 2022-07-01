@@ -5,9 +5,11 @@ $cor-rosa: #ed1e78;
 $cor-lilas: #725bc2;
 $cor-lilas-claro: #dedaf1;
 
+$cor-cinza-escuro: #6B7280 ;
 $cor-cinza: #3f4656;
 $cor-cinza-medio: #d8d6d6;
 $cor-cinza-claro: #f3f4f6;
+$cor-branco: #fff;
 
 
 $cor-background-caixa: $cor-cinza-claro;
@@ -16,14 +18,19 @@ $cor-aba: $cor-lilas-claro;
 $cor-sombra-projetada: $cor-cinza-medio;
 $cor-icone: $cor-lilas;
 $cor-borda-input: $cor-lilas;
-$cor-texto: $cor-cinza;
+$cor-texto-titulo: $cor-cinza-escuro;
+$cor-texto-corpo: $cor-cinza;
+
 $cor-texto-destaque: $cor-lilas;
+$cor-texto-botao-principal: $cor-branco;
 
 $cor-botao-principal: $cor-rosa;
 $cor-botao-secundario: $cor-lilas-claro;
 
 
-$texto-titulo: 30px;
+$texto-grande: 28px;
+$texto-medio: 20px;
+$texto-pequeno: 14px;
 
 
 

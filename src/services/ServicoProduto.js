@@ -14,7 +14,7 @@ export default class ServicoProduto {
     }
 
     async buscarProdutoPorId(idProduto) {
-        const response = await axios.get(`https://fakestoreapi.com/product/${idProduto}`);
+        const response = await axios.get(`https://fakestoreapi.com/products/${idProduto}`);
         return response.data;
     }
 

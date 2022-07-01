@@ -68,7 +68,7 @@ export default {
             .conteudo_linksInstitucional_titulo {
                 margin: 0px;
                 font-size: 16px;
-                color: $cor-texto;
+                color: $cor-texto-corpo;
             }
 
             .conteudo_linksInstitucional_item,

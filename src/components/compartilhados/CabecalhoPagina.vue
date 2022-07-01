@@ -99,7 +99,7 @@ export default {
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: $cor-texto;
+            color: $cor-texto-corpo;
 
 
         }
