@@ -15,7 +15,7 @@
 </script>
 
 <style lang="scss">
-@import '../../estilos/variaveis.scss';
+@import '../../styles/variaveis.scss';
 
  .cabecalho_pesquisaECarrinho_barraPesquisa {
                 width: 55%;

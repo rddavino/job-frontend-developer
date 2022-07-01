@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../estilos/variaveis.scss';
+@import '../../styles/variaveis.scss';
 
 
 .produto {
