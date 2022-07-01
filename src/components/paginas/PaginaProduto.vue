@@ -1,7 +1,7 @@
 <template>
     <CabecalhoPagina />
 
-    <section class="produto">
+    <section class="produto" v-if="produto!=null">
         <div class="produto_cabecalho">
             <h1 class="produto_cabecalho_titulo">{{ this.produto.title }}</h1>
         </div>
@@ -57,8 +57,7 @@ export default {
     data() {
         return {
             servicoProduto: new ServicoProduto,
-            produto: {
-            },
+            produto: null,
             tituloPagina: "Produtos relacionados",
             categoria: null,
             idProduto: this.$route.params.id,
