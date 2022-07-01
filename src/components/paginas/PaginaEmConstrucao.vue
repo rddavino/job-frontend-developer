@@ -2,7 +2,7 @@
     <CabecalhoPagina />
 
     <section class="pagina_construcao">
-        <img class="pagina_construcao_imagem" src="../../assets/ilustracao.png" alt="">
+        <img class="pagina_construcao_imagem" src="../../assets/imagens/ilustracao.png" alt="">
         <div class="pagina_construcao_texto">
             <h1 class="pagina_construcao_titulo">Página em construção</h1>
             <p class="pagina_construcao_mensagem">Estamos construindo algo incrível aqui! <br> Volte em breve para conferir.</p>

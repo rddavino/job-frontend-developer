@@ -1,7 +1,7 @@
 <template>
     <footer class="rodape">
         <div class="rodape_conteudo">
-            <img class="rodape_conteudo_logo" src="../../assets/logo.9cec7572.png" alt="logo Yampi">
+            <img class="rodape_conteudo_logo" src="../../assets/imagens/logo.9cec7572.png" alt="logo Yampi">
 
             <section div class="rodape_conteudo_linksInstitucional">
                 <h1 class="conteudo_linksInstitucional_titulo">Institucional</h1>

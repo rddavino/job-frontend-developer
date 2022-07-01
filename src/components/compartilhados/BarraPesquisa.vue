@@ -3,14 +3,9 @@
 </template>
 
 <script>
-
     export default {
-
         name: 'BarraPesquisa',
-        // components: {
-
-        // },
-
+     
         data() {
             return {
 
@@ -20,9 +15,7 @@
 </script>
 
 <style lang="scss">
-
 @import '../../estilos/variaveis.scss';
-
 
  .cabecalho_pesquisaECarrinho_barraPesquisa {
                 width: 55%;

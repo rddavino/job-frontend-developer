@@ -3,7 +3,7 @@
         <div class="cabecalho_pesquisaECarrinho">
             <img 
                 class="cabecalho_pesquisaECarrinho_logo" 
-                src="../../assets/logo.9cec7572.png" 
+                src="../../assets/imagens/logo.9cec7572.png" 
                 alt="logo Yampi"
                 @click="redirecionarParaPaginaInicial()"                
             >
