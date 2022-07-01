@@ -21,7 +21,7 @@ export default {
 
     data() {
         return {
-            categoria: this.$route.params.category,
+            categoria: this.$route.params.id,
             tituloPagina: this.categoria,
         }
     }

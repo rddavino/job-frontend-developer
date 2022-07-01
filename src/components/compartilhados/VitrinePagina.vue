@@ -47,11 +47,21 @@ export default {
         return {
             servicoProduto: new ServicoProduto,
             listaProdutos: [],
+        }
+    },
+
+    watch: {
+        categoria(idCategoria) {
+            console.log("aqui")
+            this.listaProdutos = this.servicoProduto.buscarProdutosPorCategoria(idCategoria);
+
 
         }
     },
 
     async mounted() {
+                console.log("aqio:")
+
         if (!this.categoria) {
             console.log("não tem categoria: ", this.categoria)
             this.listaProdutos = await this.servicoProduto.buscarProdutos();
@@ -61,6 +71,8 @@ export default {
             this.listaProdutos = await this.servicoProduto.buscarProdutosPorCategoria(this.categoria);
         }
     },
+
+    
 
     methods: {
         redirecionarParaProduto(idProduto) {

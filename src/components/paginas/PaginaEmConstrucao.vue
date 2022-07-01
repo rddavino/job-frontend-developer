@@ -2,7 +2,7 @@
     <CabecalhoPagina />
 
     <section class="construcao">
-<img src="" alt="">
+            <img src="" alt="">
     </section>
 
     <RodapePagina />

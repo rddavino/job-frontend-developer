@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <VitrinePagina :tituloPagina=tituloPagina :categoria="categoria" />
+    <VitrinePagina v-if="categoria!=null" :tituloPagina=tituloPagina :categoria="categoria" />
     <RodapePagina />
 </template>
 
@@ -60,14 +60,16 @@ export default {
             produto: {
             },
             tituloPagina: "Produtos relacionados",
-            categoria: `true`,
+            categoria: null,
             idProduto: this.$route.params.id,
         }
     },
 
-    async mounted() {
+    async created() {
         this.produto = await this.servicoProduto.buscarProdutoPorId(this.idProduto);
-    },
+        this.categoria = this.produto.category;
+        console.log("categoria:", this.categoria)
+    }
 
 }
 </script>
