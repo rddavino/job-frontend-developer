@@ -13,10 +13,13 @@
             </button>
         </div>
         <nav class="cabecalho_abasCategorias">
-            <a href="#" class="cabecalho_abasCategorias_aba" v-for="categoria in listaCategorias"
+            <a href="#" 
+                class="cabecalho_abasCategorias_aba" 
+                v-for="categoria in listaCategorias"
+                v-bind:key="categoria" 
                 @click="redirecionarParaCategoria(categoria)"
-                v-bind:key="categoria" >
-                    {{ categoria }}
+            >
+                {{ categoria }}
 
             </a>
         </nav>

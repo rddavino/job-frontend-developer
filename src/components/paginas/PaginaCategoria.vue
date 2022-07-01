@@ -1,6 +1,6 @@
 <template>
     <CabecalhoPagina />
-    <!-- <VitrinePagina :tituloPagina="tituloPagina" :categoria="categoria" /> -->
+    <VitrinePagina :tituloPagina="categoria" :categoria="categoria" />
     <RodapePagina />
 
 </template>
@@ -8,7 +8,7 @@
 <script>
 import CabecalhoPagina from '../compartilhados/CabecalhoPagina.vue';
 import RodapePagina from '../compartilhados/RodapePagina.vue';
-// import VitrinePagina from '../compartilhados/VitrinePagina.vue';
+import VitrinePagina from '../compartilhados/VitrinePagina.vue';
 
 export default {
     name: 'PaginaCategoria',
@@ -16,13 +16,13 @@ export default {
     components: {
         CabecalhoPagina,
         RodapePagina,
-        // VitrinePagina,
+        VitrinePagina,
     },
 
-      data() {
+    data() {
         return {
-            // categoria: this.$route.params.category.id,
-            // tituloPagina: categoria,
+            categoria: this.$route.params.category,
+            tituloPagina: this.categoria,
         }
     }
 }

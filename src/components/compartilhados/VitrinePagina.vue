@@ -10,19 +10,19 @@
             <div class="vitrine_produtos_card" v-for="produto in listaProdutos" v-bind:key="produto">
                 <div @click="redirecionarParaProduto(produto.id)">
 
-                <div class="produtos_card_imagem">
-                    <img :src="produto.image" :alt="produto.description">
-                </div>
+                    <div class="produtos_card_imagem">
+                        <img :src="produto.image" :alt="produto.description">
+                    </div>
 
-                <div class="produtos_card_detalhes">
-                    <p class="card_detalhes_nomeProduto">
-                        {{ produto.title }}
-                    </p>
+                    <div class="produtos_card_detalhes">
+                        <p class="card_detalhes_nomeProduto">
+                            {{ produto.title }}
+                        </p>
 
-                    <p class="card_detalhes_precoProduto">
-                        R$ {{ produto.price }}
-                    </p>
-                </div>
+                        <p class="card_detalhes_precoProduto">
+                            R$ {{ produto.price }}
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -53,8 +53,11 @@ export default {
 
     async mounted() {
         if (!this.categoria) {
+            console.log("não tem categoria: ", this.categoria)
             this.listaProdutos = await this.servicoProduto.buscarProdutos();
         } else {
+            console.log("tem categoria: ", this.categoria)
+
             this.listaProdutos = await this.servicoProduto.buscarProdutosPorCategoria(this.categoria);
         }
     },
