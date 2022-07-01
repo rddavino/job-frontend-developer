@@ -1,18 +1,17 @@
 <template>
-  <!-- <PaginaInicial /> -->
-  <PaginaProduto />
+  <router-view></router-view>
 </template>
 
-<script>
-// import PaginaInicial from '././components/paginas/PaginaInicial.vue'
-import PaginaProduto from '././components/paginas/PaginaProduto.vue'
+<!-- <script>
+import PaginaInicial from '././components/paginas/PaginaInicial.vue'
+
 
 
 export default {
   name: 'App',
   components: {
-    // PaginaInicial
-    PaginaProduto
+    PaginaInicial,
+    
   },
 
   data() {
@@ -34,4 +33,4 @@ body {
   font-family: 'Roboto', sans-serif;
 
 }
-</style>
+</style> -->

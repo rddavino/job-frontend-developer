@@ -30,7 +30,7 @@
         </div>
     </section>
 
-    <VitrinePagina :tituloPagina=tituloPagina :categoria=categoria />
+    <VitrinePagina :tituloPagina="tituloPagina" :categoria="categoria" />
     <RodapePagina />
 </template>
 
@@ -52,25 +52,11 @@ export default {
     data() {
         return {
             tituloPagina: `Produtos Relacionados`,
-            categoria: true
+            categoria: true,
+            idProduto: this.$route.params.id
         }
     },
-
-    methods: {
-        obterIdProduto() {
-            let query = location.search.slice(1);
-            let partes = query.split('/');
-
-            partes.forEach(function (parte) {
-                console.log(parte)
-            });
-
-        }
-    },
-
-    mounted() {
-        this.obterIdProduto();
-    }
+  
 }
 </script>
 

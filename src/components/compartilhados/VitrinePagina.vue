@@ -8,23 +8,23 @@
 
         <div class="vitrine_produtos">
             <div class="vitrine_produtos_card" v-for="produto in listaProdutos" v-bind:key="produto">
-                <div>
+                <div @click="redirecionarParaProduto(produto.id)">
 
-                    <div class="produtos_card_imagem">
-                        <img :src="produto.image" :alt="produto.description">
-                    </div>
-
-                    <div class="produtos_card_detalhes">
-                        <p class="card_detalhes_nomeProduto">
-                            {{ produto.title }}
-                        </p>
-
-                        <p class="card_detalhes_precoProduto">
-                            R$ {{ produto.price }}
-                        </p>
-                    </div>
-
+                <div class="produtos_card_imagem">
+                    <img :src="produto.image" :alt="produto.description">
                 </div>
+
+                <div class="produtos_card_detalhes">
+                    <p class="card_detalhes_nomeProduto">
+                        {{ produto.title }}
+                    </p>
+
+                    <p class="card_detalhes_precoProduto">
+                        R$ {{ produto.price }}
+                    </p>
+                </div>
+                </div>
+
             </div>
         </div>
 
@@ -47,7 +47,7 @@ export default {
         return {
             servicoProduto: new ServicoProduto,
             listaProdutos: [],
-            
+
         }
     },
 
@@ -59,7 +59,13 @@ export default {
         }
     },
 
- 
+    methods: {
+        redirecionarParaProduto(idProduto) {
+            this.$router.push(`/produto/${idProduto}`);
+        }
+    }
+
+
 }
 
 </script>

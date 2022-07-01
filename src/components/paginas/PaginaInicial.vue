@@ -1,7 +1,7 @@
 <template>
     <CabecalhoPagina />
     <div class="banner"></div>
-    <VitrinePagina :tituloPagina=tituloPagina :categoria=categoria />
+    <VitrinePagina :tituloPagina="tituloPagina" :categoria="categoria" />
     <RodapePagina />
 
 </template>

@@ -1,6 +1,7 @@
+import { createApp } from 'vue'
+import { createRouter, createWebHistory } from "vue-router";
 import App from './App.vue'
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+
 
 import PaginaInicial from '../src/components/paginas/PaginaInicial.vue'
 import PaginaProduto from '../src/components/paginas/PaginaProduto.vue'
@@ -23,14 +24,15 @@ const routes = [
     { path: '/produto/:id', component: PaginaProduto },
   ]
  
-  const router = VueRouter.createRouter({
+  const router = createRouter({
   
-    history: VueRouter.createWebHashHistory(),
+    history: createWebHistory(),
+    
     routes, // short for `routes: routes`
   })
   
   
-  const app = Vue.createApp(App)
+  const app = createApp(App)
   .component('font-awesome-icon', FontAwesomeIcon)
   app.use(router)
   app.mount('#app')
