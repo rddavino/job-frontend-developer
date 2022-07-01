@@ -1,7 +1,12 @@
 <template>
     <header class="cabecalho">
         <div class="cabecalho_pesquisaECarrinho">
-            <img class="cabecalho_pesquisaECarrinho_logo" src="../../assets/logo.9cec7572.png" alt="logo Yampi">
+            <img 
+                class="cabecalho_pesquisaECarrinho_logo" 
+                src="../../assets/logo.9cec7572.png" 
+                alt="logo Yampi"
+                @click="redirecionarParaPaginaInicial()"                
+            >
             <BarraPesquisa />
             <button class="cabecalho_pesquisaECarrinho_botaoCarrinho">
                 <font-awesome-icon class="pesquisaECarrinho_botaoCarrinho_icone" icon="fa-solid fa-cart-shopping" />
@@ -9,10 +14,9 @@
         </div>
         <nav class="cabecalho_abasCategorias">
             <a href="#" class="cabecalho_abasCategorias_aba" v-for="categoria in listaCategorias"
-                v-bind:key="categoria">
-                <div @click="redirecionarParaCategoria(categoria)">
+                @click="redirecionarParaCategoria(categoria)"
+                v-bind:key="categoria" >
                     {{ categoria }}
-                </div>
 
             </a>
         </nav>
@@ -44,6 +48,11 @@ export default {
     methods: {
         redirecionarParaCategoria(categoria) {
             this.$router.push(`/category/${categoria}`);
+        },
+
+        redirecionarParaPaginaInicial() {
+            this.$router.push(`/`);
+
         }
     }
 }
@@ -67,6 +76,7 @@ export default {
 
         .cabecalho_pesquisaECarrinho_logo {
             width: 180px;
+            cursor: pointer;
         }
 
         .cabecalho_pesquisaECarrinho_botaoCarrinho {
