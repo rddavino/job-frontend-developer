@@ -50,17 +50,8 @@ export default {
         }
     },
 
-    watch: {
-        categoria(idCategoria) {
-            console.log("aqui")
-            this.listaProdutos = this.servicoProduto.buscarProdutosPorCategoria(idCategoria);
-
-
-        }
-    },
-
     async mounted() {
-                console.log("aqio:")
+        // console.log("aqio:")
 
         if (!this.categoria) {
             console.log("não tem categoria: ", this.categoria)
@@ -72,7 +63,7 @@ export default {
         }
     },
 
-    
+
 
     methods: {
         redirecionarParaProduto(idProduto) {
