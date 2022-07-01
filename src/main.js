@@ -2,9 +2,9 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from "vue-router";
 import App from './App.vue'
 
-
 import PaginaInicial from '../src/components/paginas/PaginaInicial.vue'
 import PaginaProduto from '../src/components/paginas/PaginaProduto.vue'
+import PaginaCategoria from '../src/components/paginas/PaginaCategoria.vue'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -22,6 +22,7 @@ library.add(faCartShopping)
 const routes = [
     { path: '/', component: PaginaInicial },
     { path: '/produto/:id', component: PaginaProduto },
+    { path: '/category/:id', component: PaginaCategoria },
   ]
  
   const router = createRouter({
