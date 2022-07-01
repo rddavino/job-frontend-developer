@@ -10,7 +10,10 @@
         <nav class="cabecalho_abasCategorias">
             <a href="#" class="cabecalho_abasCategorias_aba" v-for="categoria in listaCategorias"
                 v-bind:key="categoria">
-                {{ categoria }}
+                <div @click="redirecionarParaCategoria(categoria)">
+                    {{ categoria }}
+                </div>
+
             </a>
         </nav>
     </header>
@@ -30,12 +33,18 @@ export default {
     data() {
         return {
             servicoProduto: new ServicoProduto,
-            listaCategorias: []
+            listaCategorias: [],
         }
     },
 
     async mounted() {
         this.listaCategorias = await this.servicoProduto.buscarCategorias();
+    },
+
+    methods: {
+        redirecionarParaCategoria(categoria) {
+            this.$router.push(`/category/${categoria}`);
+        }
     }
 }
 </script>

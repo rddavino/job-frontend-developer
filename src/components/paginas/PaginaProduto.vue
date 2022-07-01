@@ -58,12 +58,6 @@ export default {
         return {
             servicoProduto: new ServicoProduto,
             produto: {
-                id: Number,
-                title: String,
-                price: String,
-                category: String,
-                description: String,
-                image: String
             },
             tituloPagina: "Produtos relacionados",
             categoria: `true`,
